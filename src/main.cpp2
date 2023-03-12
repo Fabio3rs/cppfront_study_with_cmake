@@ -1,0 +1,16 @@
+#include "decorate.hpp"
+
+main: () -> int = {
+    std::cout << "Hello " << name() << "\n";
+
+    inval : std::string = "";
+    std::cin >> inval;
+
+    std::cout << "Hello cin " << inval << std::endl;
+}
+
+name: () -> std::string = {
+    s: std::string = "world";
+    decorate(s);
+    return s;
+}
